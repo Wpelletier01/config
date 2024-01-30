@@ -26,6 +26,10 @@ exec --no-startup-id nitrogen --restore &
 exec_always xautolock -time 12 -locker "~/scripts/layout.sh" -detectsleep
 
 
+## SPECIFIC APP SETTING
+#
+for_window [title="galculator"] floating enable
+
 # GAPS BETWEEN WINDOWS
 gaps inner 10
 gaps outer 5
@@ -37,7 +41,8 @@ default_floating_border pixel 0
 bindsym $mod+d exec ~/.config/rofi/launchers/type-1/launcher.sh
 # POWERMENU LAUNCHER
 bindsym $mod+p exec ~/.config/rofi/powermenu/type-1/powermenu.sh
-
+# CHANGE LAYOUT 
+bindsym $mod+F9 exec ~/scripts/keyboard-switch.sh
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
